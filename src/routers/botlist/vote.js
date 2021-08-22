@@ -56,7 +56,7 @@ app.post("/bot/:botID/vote", global.checkAuth, async (req, res) => {
         }
     })
     client.channels.cache.get(channels.votes).send(new Discord.MessageEmbed()
-    .setTitle(`<:vote:872580144714358784> **${req.user.username}** Voted For **${botdata.username}**`)
+    .setTitle(`<:vote:878187594574352404> **${req.user.username}** Voted For **${botdata.username}**`)
     .setDescription(`**${botdata.username}** Now Has **\`[Total Votes ${botdata.votes + 1}]\`**` )
     .setTimestamp()
     .setColor("GREEN")

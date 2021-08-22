@@ -92,7 +92,7 @@ app.post("/:guildID/announcement", global.checkAuth, async (req, res) => {
             annoucementdate: datum,
         }
     }, function(err, docs) { })
-    client.channels.cache.get(global.config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`<:edited:870019650593910875> Ann Post`).setDescription(`<:edited:870019650593910875> **${req.user.username}** Posted an announcement for **${guild.name}** \n [Click here to view it!](https://Usure.one/server/${guild.id}/)`))
+    client.channels.cache.get(global.config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`<:edited:878180280874205244> Ann Post`).setDescription(`<:edited:878180280874205244> **${req.user.username}** Posted an announcement for **${guild.name}** \n [Click here to view it!](https://Usure.one/server/${guild.id}/)`))
     return res.send({
         success: true,
         message: "Successfully Announcemented"

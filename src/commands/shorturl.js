@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js')
 const fetch = require("node-fetch");
 
 module.exports.run = async (client,message,args) => {
-    if (!message.member.roles.cache.some((role) => role.name === 'PREMIUM')) return message.channel.send("<:no:833101993668771842> Either the server owner hasnt made a role called **PREMIUM**, or you dont have the **PREMIUM** role! <:no:833101993668771842>");
+    if (!message.member.roles.cache.some((role) => role.name === 'PREMIUM')) return message.channel.send("<:no:878179108440375317> Either the server owner hasnt made a role called **PREMIUM**, or you dont have the **PREMIUM** role! <:no:878179108440375317>");
      if(!args[0]) return message.channel.send("Error: Please give us a url to shorten.");
    const url = args.join(" ");
 

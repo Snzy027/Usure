@@ -3,7 +3,7 @@ const Usure = require("Usure-one");
 const { MessageButton, MessageActionRow } = require('discord-buttons');
 const botdata = require("../database/models/botlist/bots.js")
 module.exports.run = async (client,message,args) => {
-  if (!message.member.roles.cache.some((role) => role.name === 'PREMIUM')) return message.channel.send("<:no:833101993668771842> Either the server owner hasnt made a role called **PREMIUM**, or you dont have the **PREMIUM** role! <:no:833101993668771842>");
+  if (!message.member.roles.cache.some((role) => role.name === 'PREMIUM')) return message.channel.send("<:no:878179108440375317> Either the server owner hasnt made a role called **PREMIUM**, or you dont have the **PREMIUM** role! <:no:878179108440375317>");
   let x = await botdata.find();
   let bots = await x.filter(a => a.ownerID == message.author.id || a.coowners.includes(message.author.id))
    const embed = new Discord.MessageEmbed()

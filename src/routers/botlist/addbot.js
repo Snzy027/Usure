@@ -72,7 +72,7 @@ console.log("[Usure.one]: Botlist/Add Bot router loaded.");
       res.redirect(`?success=true&message=Your bot has been successfully added to the system.&botID=${rBody['botID']}`)
       client.users.fetch(rBody['botID']).then(a => {
 client.channels.cache.get(channels.botlog).send(new Discord.MessageEmbed()
-    .setTitle(`<:plus:870019597791805521> **${req.user.username}** added **${a.tag}**`)
+    .setTitle(`<:plus:878180280882585600> **${req.user.username}** added **${a.tag}**`)
     .setDescription(`[Click Here](https://Usure.one/bot/${a.id})`)
     .setTimestamp()
     .setColor("GREEN")

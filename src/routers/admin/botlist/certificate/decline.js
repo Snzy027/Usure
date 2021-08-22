@@ -23,8 +23,8 @@ app.post("/admin/certificate/delete/:botID", global.checkAuth, async (req, res) 
         botID: req.params.botID
     });
     client.users.fetch(botdata.botID).then(bota => {
-        client.channels.cache.get(channels.botlog).send(new Discord.MessageEmbed().setTitle(`Certify Denied`).setDescription(`<:no:833101993668771842> <@${botdata.ownerID}>'s bot named **${bota.tag}** has not been granted a certificate.`))
-        client.users.cache.get(botdata.ownerID).send(new Discord.MessageEmbed().setTitle(`Certify Denied`).setDescription(`<:no:833101993668771842> Your bot named **${bota.tag}** certificate application has been declined.\nReason: **${rBody['reason']}**`))
+        client.channels.cache.get(channels.botlog).send(new Discord.MessageEmbed().setTitle(`Certify Denied`).setDescription(`<:no:878179108440375317> <@${botdata.ownerID}>'s bot named **${bota.tag}** has not been granted a certificate.`))
+        client.users.cache.get(botdata.ownerID).send(new Discord.MessageEmbed().setTitle(`Certify Denied`).setDescription(`<:no:878179108440375317> Your bot named **${bota.tag}** certificate application has been declined.\nReason: **${rBody['reason']}**`))
     });
     await appsdata.deleteOne({
         botID: req.params.botID

@@ -127,7 +127,7 @@ app.post("/:guildID/edit", global.checkAuth, async (req, res) => {
     }, { upsert: true })
     }
 
-    client.channels.cache.get(global.config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`<:edited:870019650593910875> Server Edited`).setDescription(`<:edited:870019650593910875> **${req.user.username}** edited **${guild.name}** \n [Click here to view it!](https://Usure.one/server/${guild.id}/)`))
+    client.channels.cache.get(global.config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`<:edited:878180280874205244> Server Edited`).setDescription(`<:edited:878180280874205244> **${req.user.username}** edited **${guild.name}** \n [Click here to view it!](https://Usure.one/server/${guild.id}/)`))
     return res.send({
         success: true,
         message: "Server succesfuly edited."

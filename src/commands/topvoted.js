@@ -39,7 +39,7 @@ module.exports.run = async (client, message, args) => {
     const embed = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL({ dynamic: true }))
       .setColor("#7289da")
-      .setDescription(`**<:vote:872580144714358784> Top 6 voted bots of the week! <:vote:872580144714358784>**\n${botsdata1}\n\n**<:vote:872580144714358784> Top 6 voted servers of the week! <:vote:872580144714358784>**\n${serversdata1}`)
+      .setDescription(`**<:vote:878187594574352404> Top 6 voted bots of the week! <:vote:878187594574352404>**\n${botsdata1}\n\n**<:vote:878187594574352404> Top 6 voted servers of the week! <:vote:878187594574352404>**\n${serversdata1}`)
       .setFooter('Powered By Usure.one | Modified By Usure.one')
     message.channel.send(embed)
   }

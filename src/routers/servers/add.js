@@ -85,7 +85,7 @@ app.post("/add", global.checkAuth, async (req,res) => {
         let checkGuilds = await db.findOne({ id: guildID });
     let guilda = client.guilds.cache.get(global.config.server.id)
     guilda.members.cache.get(checkGuilds.ownerID).roles.add(global.config.server.roles.botlist.ownerserver);
-    client.channels.cache.get(global.config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`<:plus:870019597791805521> Server Add`).setDescription(`<:plus:870019597791805521> <@${checkGuilds.ownerID}> added **${guild.name}** \n [Click here to view it!](https://Usure.one/server/${checkGuilds.id}/)`))
+    client.channels.cache.get(global.config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`<:plus:878180280882585600> Server Add`).setDescription(`<:plus:878180280882585600> <@${checkGuilds.ownerID}> added **${guild.name}** \n [Click here to view it!](https://Usure.one/server/${checkGuilds.id}/)`))
     return res.send({ success: true, message: "Server succesfuly added." });
 })
 

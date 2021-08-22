@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 
 module.exports.run = async (client,message,args) => {
      if(!args[0]) return message.channel.send(new MessageEmbed()
-     .setDescription("<:no:833101993668771842> Please mention someone to report.\n<:info:876255965249437717> Ex. _+report @Mr Usure Bad owner_")
+     .setDescription("<:no:878179108440375317> Please mention someone to report.\n<:info:878179399596392479> Ex. _+report @Mr Usure Bad owner_")
      .setFooter("You must mention someone and give a reason")
      .setColor("RANDOM"));
      const msg = args.join(" ");

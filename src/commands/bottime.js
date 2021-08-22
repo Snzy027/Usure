@@ -6,7 +6,7 @@ const botsdata = require("../database/models/botlist/bots.js")
 const config = require("../../config.js");
 module.exports.run = async (client, message, args) => {
 var bot = message.mentions.users.first()
-if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setDescription("<:no:833101993668771842> Please Mention A bot from our web.\n<:info:876255965249437717> **Ex.** *+botuptime @Usure.one or 123456789123456789*"));
+if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setDescription("<:no:878179108440375317> Please Mention A bot from our web.\n<:info:878179399596392479> **Ex.** *+botuptime @Usure.one or 123456789123456789*"));
     if(bot)
     {
       var bot = bot;
@@ -17,7 +17,7 @@ if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setDescripti
     if(!bot)
     {
       const embed = new Discord.MessageEmbed()
-      .setDescription(`<:no:833101993668771842> *You have given an invalid bot ID or mention.*\n<:info:876255965249437717> **Ex.** *+botuptime @Usure.one or 123456789123456789*`)
+      .setDescription(`<:no:878179108440375317> *You have given an invalid bot ID or mention.*\n<:info:878179399596392479> **Ex.** *+botuptime @Usure.one or 123456789123456789*`)
        .setColor("#7289da")
       return message.channel.send(embed)
     } 
@@ -28,7 +28,7 @@ if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setDescripti
       if(!botdata)
       {
          const embed1 = new Discord.MessageEmbed()
-      .setDescription(`<:no:833101993668771842> *Thats not a current bot in Usure or in guild.*`)
+      .setDescription(`<:no:878179108440375317> *Thats not a current bot in Usure or in guild.*`)
        .setColor("#7289da")
       return message.channel.send(embed1)
       }
@@ -52,7 +52,7 @@ if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setDescripti
     let checks = db.fetch(`checks_${bot.id}`); 
  
      const embed2 = new Discord.MessageEmbed()
-      .setDescription(`<:uptime:876259414678593596> Uptime - ${checking}% Checks - ${ochecks || 0}/${checks || 0} \n<:info:876255965249437717> ${check} Time - ${days}d ${hour}h ${minutes}m ${seconds}s`)
+      .setDescription(`<:uptime:878179675099258910> Uptime - ${checking}% Checks - ${ochecks || 0}/${checks || 0} \n<:info:878179399596392479> ${check} Time - ${days}d ${hour}h ${minutes}m ${seconds}s`)
        .setColor("#7289da")
       return message.channel.send(embed2)
 

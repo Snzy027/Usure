@@ -7,7 +7,7 @@ module.exports.run = async (client,message,args) => {
   let bots = await x.filter(a => a.ownerID == message.author.id || a.coowners.includes(message.author.id))
    const embed = new Discord.MessageEmbed()
    .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-   .setDescription(`<a:yes:833101995723194437> **[Usure Bot Emojis](https://Usure.one)** <a:yes:833101995723194437>\n\n**Here are my emojis,\n<:cross:870019707065991178><:check:870019748585414686><:edited:870019650593910875><a:yes:833101995723194437><:plus:870019597791805521><:no:833101993668771842>\nWant to suggest better ones? Join my [support](http://Usure.one/dc) server!**`)
+   .setDescription(`<a:yes:833101995723194437> **[Usure Bot Emojis](https://Usure.one)** <a:yes:833101995723194437>\n\n**Here are my emojis,\n<:cross:878180280819654696><:check:878180280928718858><:edited:878180280874205244><a:yes:833101995723194437><:plus:878180280882585600><:no:878179108440375317>\nWant to suggest better ones? Join my [support](http://Usure.one/dc) server!**`)
    .setColor("#7289da")
    .setFooter('Powered By Usure.one')
          let button = new MessageButton()

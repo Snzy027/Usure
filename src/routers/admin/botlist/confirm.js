@@ -27,17 +27,17 @@ app.get("/admin/confirm/:botID", global.checkAuth, async (req, res) => {
     }, function(err, docs) {})
     client.users.fetch(req.params.botID).then(bota => {
         client.channels.cache.get(global.config.server.channels.botlog).send(new Discord.MessageEmbed()
-        .setTitle(`<:check:870019748585414686>  Bot Approved!`)
-        .setDescription(`**• <:bot:876940784119734312> Bot Name:** <@${bota.id}>
-        **• <:owner:876940638560587796> Bot owner:** <@${botdata.ownerID}>
-        **• <:members:876940862305751121> Approved by:** <@${req.user.id}>`)
+        .setTitle(`<:check:878180280928718858>  Bot Approved!`)
+        .setDescription(`**• <:bot:879063485663825951> Bot Name:** <@${bota.id}>
+        **• <:owner:878309780039544863> Bot owner:** <@${botdata.ownerID}>
+        **• <:members:878309596324823140> Approved by:** <@${req.user.id}>`)
         .setColor("RANDOM")
         .setThumbnail(bota.displayAvatarURL())
         .setFooter(`Thanks for using Usure.one bot list!`, bota.displayAvatarURL())
         .setTimestamp())
         client.users.cache.get(botdata.ownerID).send(new Discord.MessageEmbed()
-        .setTitle(`<:check:870019748585414686> Bot Approved`)
-        .setDescription(`<:check:870019748585414686> Your Bot Named **${bota.tag}** \n Has Been Approved by <@${req.user.id}>.`))
+        .setTitle(`<:check:878180280928718858> Bot Approved`)
+        .setDescription(`<:check:878180280928718858> Your Bot Named **${bota.tag}** \n Has Been Approved by <@${req.user.id}>.`))
         .setColor("BLUE")
         .setFooter(`Thanks For Using Our Website`)
         .setTimestamp()

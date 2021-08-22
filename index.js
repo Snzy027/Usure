@@ -210,12 +210,12 @@ client.on('guildMemberRemove', async member => {
         await botlar.deleteOne({ botID: b.botID })
     })
     client.guilds.fetch(config.server.id).then(bota => {
-      client.channels.cache.get(config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`Owner Left`).setDescription(`<:no:833101993668771842>  <@${data.ownerID}>'s bot **${bota.username}** has been kicked from server and deleted from website \nReason: Owner left server`))
+      client.channels.cache.get(config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`Owner Left`).setDescription(`<:no:878179108440375317>  <@${data.ownerID}>'s bot **${bota.username}** has been kicked from server and deleted from website \nReason: Owner left server`))
     });
     if(!serverdata) return
     let serverfind = await serverdata.find({ ownerID: member.id })
     client.guilds.fetch(config.server.id).then(bota => {
-      client.channels.cache.get(config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`Owner Left`).setDescription(`<:no:833101993668771842>  <@${serverfind.ownerID}>'s server **${serverfind.name}** has been deleted from website \nReason: Owner left server`))
+      client.channels.cache.get(config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`Owner Left`).setDescription(`<:no:878179108440375317>  <@${serverfind.ownerID}>'s server **${serverfind.name}** has been deleted from website \nReason: Owner left server`))
     });
     await serverfind.forEach(async b => {
         await serverfind.deleteOne({ id: b.id })

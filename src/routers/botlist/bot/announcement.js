@@ -52,7 +52,7 @@ app.post("/bot/:botID/announcement", global.checkAuth, async (req, res) => {
     }, function(err, docs) { })
     client.users.fetch(req.params.botID).then(a => {
     client.channels.cache.get(channels.botlog).send(new Discord.MessageEmbed()
-    .setTitle(`<:plus:870019597791805521> **${req.user.username}** posted a new announcement for **${a.tag}**`)
+    .setTitle(`<:plus:878180280882585600> **${req.user.username}** posted a new announcement for **${a.tag}**`)
     .setDescription(`[Click Here](https://Usure.one/bot/${a.id})`)
     .setColor("GREEN")
     .setTimestamp()

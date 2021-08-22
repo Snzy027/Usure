@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js')
 const fetch = require("node-fetch");
 
 module.exports.run = async (client,message,args) => {
-    if(!global.config.bot.owners.includes(message.author.id)) return  message.reply('<:no:833101993668771842> Only The Owner Of Usure Can Use This Bypass <:no:833101993668771842>')
+    if(!global.config.bot.owners.includes(message.author.id)) return  message.reply('<:no:878179108440375317> Only The Owner Of Usure Can Use This Bypass <:no:878179108440375317>')
      if(!args[0]) return message.channel.send("Error: Please give us a url to shorten.");
    const url = args.join(" ");
 

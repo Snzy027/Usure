@@ -457,8 +457,8 @@ app.get("/admin/premium/give/:botID", checkMaintence, checkAdmin, checkAuth, asy
   });
 
   client.guilds.fetch(serverdata.id).then(bota => {
-    client.channels.cache.get(config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`Promo Add`).setDescription(`<:check:870019748585414686>  <@${serverdata.ownerID}>'s server **${bota.name}** has been promoted to **Premium**.`))
-    client.users.cache.get(serverdata.ownerID).send(new Discord.MessageEmbed().setTitle(`Promo Add`).setDescription(`<:check:870019748585414686>  Your server named **${bota.name}** has been promoted to **Premium**.`))
+    client.channels.cache.get(config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`Promo Add`).setDescription(`<:check:878180280928718858>  <@${serverdata.ownerID}>'s server **${bota.name}** has been promoted to **Premium**.`))
+    client.users.cache.get(serverdata.ownerID).send(new Discord.MessageEmbed().setTitle(`Promo Add`).setDescription(`<:check:878180280928718858>  Your server named **${bota.name}** has been promoted to **Premium**.`))
   });
   let guild = client.guilds.cache.get(config.server.id)
   guild.members.cache.get(serverdata.ownerID).roles.add(roles.botlist.premium_developer);
@@ -478,7 +478,7 @@ app.get("/admin/premium/delete/:botID", checkMaintence, checkAdmin, checkAuth, a
   });
   client.guilds.fetch(serverdata.id).then(bota => {
     client.channels.cache.get(config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`Server Promo Remove`).setDescription(`<@${serverdata.ownerID}>'s server named **${bota.name}**'s Premium has been removed.`))
-    client.users.cache.get(serverdata.ownerID).send(new Discord.MessageEmbed().setTitle(`Server Promo Remove`).setDescription(`<:no:833101993668771842> Your server named **${bota.name}**'s Premium has been removed.`))
+    client.users.cache.get(serverdata.ownerID).send(new Discord.MessageEmbed().setTitle(`Server Promo Remove`).setDescription(`<:no:878179108440375317> Your server named **${bota.name}**'s Premium has been removed.`))
   });
   await appsdata.deleteOne({
     id: req.params.botID
@@ -501,7 +501,7 @@ app.get("/admin/boost/delete/:botID", checkMaintence, checkAdmin, checkAuth, asy
   });
   client.users.fetch(botdata.botID).then(bota => {
     client.channels.cache.get(channels.botlog).send(new Discord.MessageEmbed().setTitle(`Bot Promo Remove`).setDescription(`<@${botdata.ownerID}>'s bot named **${bota.tag}**'s promotion has been removed.`))
-    client.users.cache.get(botdata.ownerID).send(new Discord.MessageEmbed().setTitle(`Bot Boost Remove`).setDescription(`<:no:833101993668771842> Your bot named **${bota.tag}**'s boost has been removed.`))
+    client.users.cache.get(botdata.ownerID).send(new Discord.MessageEmbed().setTitle(`Bot Boost Remove`).setDescription(`<:no:878179108440375317> Your bot named **${bota.tag}**'s boost has been removed.`))
   });
   await appsdata.deleteOne({
     botID: req.params.botID
@@ -540,7 +540,7 @@ app.get("/admin/server/delete/:botID", checkMaintence, checkAdmin, checkAuth, as
   if (!botdata) return res.redirect("/error?code=404&message=You entered an invalid server id.");
   let guild = client.guilds.cache.get(config.server.id)
   await botdata.deleteOne({ id: req.params.guildID });
-  client.channels.cache.get(channels.botlog).send(new Discord.MessageEmbed().setTitle(`Server Delete`).setDescription(`<:no:833101993668771842> <@${botdata.ownerID}>'s server named **${botdata.name}** has been deleted by ${req.user.username}.`))
+  client.channels.cache.get(channels.botlog).send(new Discord.MessageEmbed().setTitle(`Server Delete`).setDescription(`<:no:878179108440375317> <@${botdata.ownerID}>'s server named **${botdata.name}** has been deleted by ${req.user.username}.`))
   guild.members.cache.get(botdata.ownerID).roles.remove(roles.botlist.ownerserver);
   if (botdata.coowners) {
     botdata.coowners.map(a => {
@@ -563,7 +563,7 @@ app.get("/admin/promote/delete/:botID", checkMaintence, checkAdmin, checkAuth, a
   });
   client.users.fetch(botdata.botID).then(bota => {
     client.channels.cache.get(channels.botlog).send(new Discord.MessageEmbed().setTitle(`Bot Promo Remove`).setDescription(`<@${botdata.ownerID}>'s bot named **${bota.tag}**'s promotion has been removed.`))
-    client.users.cache.get(botdata.ownerID).send(new Discord.MessageEmbed().setTitle(`Bot Promo Remove`).setDescription(`<:no:833101993668771842> Your bot named **${bota.tag}**'s promotion has been removed.`))
+    client.users.cache.get(botdata.ownerID).send(new Discord.MessageEmbed().setTitle(`Bot Promo Remove`).setDescription(`<:no:878179108440375317> Your bot named **${bota.tag}**'s promotion has been removed.`))
   });
   await appsdata.deleteOne({
     botID: req.params.botID
@@ -622,8 +622,8 @@ app.get("/admin/boost/give/:botID", checkMaintence, checkAdmin, checkAuth, async
   });
 
   client.users.fetch(botdata.botID).then(bota => {
-    client.channels.cache.get(channels.botlog).send(new Discord.MessageEmbed().setTitle(`Bot Boost Add`).setDescription(`<:check:870019748585414686> <@${botdata.ownerID}>'s bot  **${bota.tag}** has been **Boosted**.`))
-    client.users.cache.get(botdata.ownerID).send(new Discord.MessageEmbed().setTitle(`Bot Boost Add`).setDescription(`<:check:870019748585414686> Your bot named **${bota.tag}** has been **Boosted**.`))
+    client.channels.cache.get(channels.botlog).send(new Discord.MessageEmbed().setTitle(`Bot Boost Add`).setDescription(`<:check:878180280928718858> <@${botdata.ownerID}>'s bot  **${bota.tag}** has been **Boosted**.`))
+    client.users.cache.get(botdata.ownerID).send(new Discord.MessageEmbed().setTitle(`Bot Boost Add`).setDescription(`<:check:878180280928718858> Your bot named **${bota.tag}** has been **Boosted**.`))
   });
   let guild = client.guilds.cache.get(config.server.id)
   guild.members.cache.get(botdata.botID).roles.add(roles.botlist.boosted_bot);
@@ -651,10 +651,10 @@ app.get("/admin/promote/give/:botID", checkMaintence, checkAdmin, checkAuth, asy
 
   client.users.fetch(botdata.botID).then(bota => {
     client.channels.cache.get(channels.botlog).send(new Discord.MessageEmbed().setTitle(`Bot Promo Add`)
-    .setDescription(`<:check:870019748585414686> <@${botdata.ownerID}>'s bot  **${bota.tag}** has been **Promoted**.`)
+    .setDescription(`<:check:878180280928718858> <@${botdata.ownerID}>'s bot  **${bota.tag}** has been **Promoted**.`)
     )
     client.users.cache.get(botdata.ownerID).send(new Discord.MessageEmbed().setTitle(`Bot Promo Add`)
-    .setDescription(`<:check:870019748585414686> Your bot named **${bota.tag}** has been **Promoted**.`)
+    .setDescription(`<:check:878180280928718858> Your bot named **${bota.tag}** has been **Promoted**.`)
     )
   });
   let guild = client.guilds.cache.get(config.server.id)
@@ -805,7 +805,7 @@ app.post("/admin/certificate/delete/:botID", checkMaintence, checkAdmin, checkAu
   });
   client.users.fetch(botdata.botID).then(bota => {
     client.channels.cache.get(channels.botlog).send(new Discord.MessageEmbed().setTitle(`Certify Denied`).setDescription(`<@${botdata.ownerID}>'s bot named **${bota.tag}** has not been granted a certificate.`))
-    client.users.cache.get(botdata.ownerID).send(new Discord.MessageEmbed().setTitle(`Certify Denied`).setDescription(`<:no:833101993668771842> Your bot named **${bota.tag}** certificate application has been declined.\nReason: **${rBody['reason']}**`))
+    client.users.cache.get(botdata.ownerID).send(new Discord.MessageEmbed().setTitle(`Certify Denied`).setDescription(`<:no:878179108440375317> Your bot named **${bota.tag}** certificate application has been declined.\nReason: **${rBody['reason']}**`))
   });
   await appsdata.deleteOne({
     botID: req.params.botID

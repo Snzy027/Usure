@@ -22,8 +22,8 @@ app.get("/admin/certificate/give/:botID", global.checkAuth, async (req, res) => 
   });
 
   client.users.fetch(botdata.botID).then(bota => {
-    client.channels.cache.get(global.config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`Bot Certified`).setDescription(`<:check:870019748585414686> <@${botdata.ownerID}>'s bot named **${bota.tag}** has been granted a certificate.`))
-    client.users.cache.get(botdata.ownerID).send(new Discord.MessageEmbed().setTitle(`Bot Certified`).setDescription(`<:check:870019748585414686> Your bot named **${bota.tag}** has been certified.`))
+    client.channels.cache.get(global.config.server.channels.botlog).send(new Discord.MessageEmbed().setTitle(`Bot Certified`).setDescription(`<:check:878180280928718858> <@${botdata.ownerID}>'s bot named **${bota.tag}** has been granted a certificate.`))
+    client.users.cache.get(botdata.ownerID).send(new Discord.MessageEmbed().setTitle(`Bot Certified`).setDescription(`<:check:878180280928718858> Your bot named **${bota.tag}** has been certified.`))
   });
   await appsdata.deleteOne({
     botID: req.params.botID

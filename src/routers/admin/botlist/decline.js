@@ -18,8 +18,8 @@ app.post("/admin/decline/:botID", global.checkAuth, async (req, res) => {
         botID: req.params.botID
     });
     client.users.fetch(botdata.ownerID).then(sahip => {
-        client.channels.cache.get(global.config.server.channels.botlog).send(new Discord.MessageEmbed().setDescription(`<:no:833101993668771842> <@${botdata.ownerID}>'s bot named **${botdata.username}** has been declined.\nReason: **${rBody['reason']}** `))
-        client.users.cache.get(botdata.ownerID).send(new Discord.MessageEmbed().setDescription(`<:no:833101993668771842> Your bot named **${botdata.username}** has been declined.\nReason: **${rBody['reason']}**\nAuthorized: **${req.user.username}**`))
+        client.channels.cache.get(global.config.server.channels.botlog).send(new Discord.MessageEmbed().setDescription(`<:no:878179108440375317> <@${botdata.ownerID}>'s bot named **${botdata.username}** has been declined.\nReason: **${rBody['reason']}** `))
+        client.users.cache.get(botdata.ownerID).send(new Discord.MessageEmbed().setDescription(`<:no:878179108440375317> Your bot named **${botdata.username}** has been declined.\nReason: **${rBody['reason']}**\nAuthorized: **${req.user.username}**`))
     })
     await botsdata.deleteOne({
         botID: req.params.botID,

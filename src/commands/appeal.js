@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 
 module.exports.run = async (client,message,args) => {
      if(!args[0]) return message.channel.send(new MessageEmbed()
-     .setDescription("<:no:833101993668771842> Please give us a reason on why you should be unbanned from Usure!\n<:info:876255965249437717> Ex. _+appeal pls i did nothing wrong!_")
+     .setDescription("<:no:878179108440375317> Please give us a reason on why you should be unbanned from Usure!\n<:info:878179399596392479> Ex. _+appeal pls i did nothing wrong!_")
      .setFooter("Thanks for Using Us!")
      .setColor("RANDOM"));
      const msg = args.join(" ");

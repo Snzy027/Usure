@@ -54,7 +54,7 @@ app.post("/bot/:botID/edit", global.checkAuth, async (req, res) => {
         }
     }, function(err, docs) {})
     client.users.fetch(req.params.botID).then(a => {
-        client.channels.cache.get(channels.botlog).send(new Discord.MessageEmbed().setTitle(`Bot Edited`).setDescription(`<:edited:870019650593910875> <@${req.user.id}> edited **${a.tag}**`))
+        client.channels.cache.get(channels.botlog).send(new Discord.MessageEmbed().setTitle(`Bot Edited`).setDescription(`<:edited:878180280874205244> <@${req.user.id}> edited **${a.tag}**`))
         res.redirect(`?success=true&message=Your bot has been successfully edited.&botID=${req.params.botID}`)
     })
 })
