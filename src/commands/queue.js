@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const Usure = require("Usure-one");
+const Usure = require("usure-one");
 const botdata = require("../database/models/botlist/bots.js")
 module.exports.run = async (client,message,args) => {
    let x = await botdata.find();

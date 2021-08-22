@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const asd = require('Usure-one');
-const Usure = require("Usure-one");
+const asd = require('usure-one');
+const Usure = require("usure-one");
 const bots = require("../database/models/botlist/bots.js");
 module.exports.run = async (client,message,args) => {
    if(!args[0]) return message.channel.send("Error: Please write bot id.");
