@@ -28,7 +28,7 @@ app.get("/admin/confirm/:botID", global.checkAuth, async (req, res) => {
     client.users.fetch(req.params.botID).then(bota => {
         client.channels.cache.get(global.config.server.channels.botlog).send(new Discord.MessageEmbed()
         .setTitle(`<:check:878180280928718858>  Bot Approved!`)
-        .setDescription(`**• <:bot:879063485663825951> Bot Name:** <@${bota.id}>
+        .setDescription(`**• <:bot:879063485663825951>  Bot Name:** <@${bota.id}>
         **• <:owner:878309780039544863> Bot owner:** <@${botdata.ownerID}>
         **• <:members:878309596324823140> Approved by:** <@${req.user.id}>`)
         .setColor("RANDOM")
