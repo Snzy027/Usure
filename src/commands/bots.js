@@ -1,4 +1,4 @@
-const Usure = require("Usure-xyz");
+const Usure = require("usure-one");
 const Discord = require('discord.js')
 const botdata = require("../database/models/botlist/bots.js")
 module.exports.run = async (client,message,args) => {

@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const Usure = require("Usure-xyz");
+const Usure = require("usure-one");
 const botdata = require("../../database/models/botlist/bots.js")
 const serverdata = require("../../database/models/servers/server.js");
 const pdata = require("../../database/models/profile.js");

@@ -90,8 +90,8 @@ module.exports = async (client) => {
   app.use(passport.session());
 
 
-  app.engine("Usure-xyz", ejs.renderFile);
-  app.set("view engine", "Usure-xyz");
+  app.engine("usure-one", ejs.renderFile);
+  app.set("view engine", "usure-one");
 
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({
@@ -847,7 +847,7 @@ console.clear();
 console.log(`
       [===========================================]
                        Usure.one
-        https://github.com/Usure-xyz/benedict
+        https://github.com/usure-one/benedict
                 Developed by Claudette
                     Achievements =)
       [===========================================]
